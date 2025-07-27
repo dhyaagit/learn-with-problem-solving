@@ -248,3 +248,209 @@ let sentence = "I love JavaScript";
 
 let result = sentence.split(" ");
 console.log(result.length);
+
+
+
+
+
+//learn object in js
+
+/* ✅ 1. Create a Simple Object
+Task: Create an object called person with properties: name, age, and city. Print each property using dot notation.
+
+✅ 2. Add and Delete Properties
+Task:
+Add a property job to the person object.
+Then delete the city property.
+
+✅ 3. Check if Key Exists
+Task:
+Write a function that checks if a given key exists in an object using the in operator or hasOwnProperty().
+// Object.hasOwn(obj, prop)	
+// obj.hasOwnProperty(prop)	
+
+
+let user = { name: "Dhiaa", age: 18 };
+checkKey(user, "name");  // true
+checkKey(user, "email"); // false
+
+✅ 4. Loop Through Object
+Task:
+Loop through the properties of an object and print both the keys and their values.
+
+✅ 5. Count Object Properties
+Task:
+Write a function that counts how many properties an object has.
+
+✅ 6. Convert Object to Array
+Task:
+Convert the object { a: 1, b: 2, c: 3 } to an array of key-value pairs:
+
+
+[["a", 1], ["b", 2], ["c", 3]]
+Hint: Use Object.entries().
+
+✅ 7. Nested Objects
+Task:
+Access and modify values in a nested object.
+
+
+let student = {
+  name: "Ahmed",
+  scores: {
+    math: 80,
+    science: 90
+  }
+};
+Update the math score to 95.
+
+✅ 8. Object Inside Array
+Task:
+You have an array of users:
+
+
+let users = [
+  { name: "Ali", age: 20 },
+  { name: "Mona", age: 25 }
+];
+Loop through the array and print each user's name and age.
+
+✅ 9. Merge Two Objects
+Task:
+Write a function that merges two objects into one.
+
+
+merge({ a: 1 }, { b: 2 }); // { a: 1, b: 2 }
+Hint: Use the spread operator.
+
+✅ 10. Object with Methods
+Task:
+Create an object with a method that returns a greeting using the object's properties.
+
+
+let user = {
+  name: "Sarah",
+  greet: function () {
+    return "Hello, my name is " + this.name;
+  }
+};
+*/
+
+
+
+
+
+//1
+/* let person = {
+    name: 'dhyaa',
+    age: 19,
+    city: "alger"
+}; */
+//console.log(person);
+
+//2
+/* 
+person.job = "developer";
+console.log(person.job);
+
+console.log(person);
+
+delete person.city;
+console.log(person); */
+
+//3
+/* function chekprop() {
+   if (person.hasOwnProperty("age")) {
+        return true;
+   }else{
+    return false;
+   }
+}
+console.log(chekprop()); */
+
+
+//4
+/* for (let key in person) {
+   console.log(person);
+} */
+
+//5
+/* function countProp() {
+    
+    let count = 0
+    for (let key in person) {
+        count++;
+    }
+    return count;
+}
+console.log(countProp()); */ 
+
+//6
+/* let output = Object.entries(person);
+console.log(output); */
+
+//7
+/* let student = {
+  name: "Ahmed",
+  scores: {
+    math: 80,
+    science: 90
+  }
+};
+student.scores.math = 95;
+console.log(student.scores.math);
+ */
+
+//8
+/* let users = [
+  { name: "Ali", age: 20 },
+  { name: "Mona", age: 25 }
+];
+for (const x of users) {
+    console.log(x.name, x.age);
+} */
+
+//9
+/* let obj1 = {
+    a: 1
+};
+let obj2 = {
+    b: 1
+};
+function mergeObj() {
+    let obj = Object.assign({}, obj1, obj2);
+    return obj;
+    
+}
+console.log(mergeObj()); */
+
+//10
+/* let user = {
+  name: "Sarah",
+  greet: function () {
+    return "Hello, my name is " + this.name;
+  }
+};
+console.log(user.greet());
+ */
+
+
+//mini project 
+/* let library = {
+  books: [
+    { title: "The Alchemist", author: "Paulo Coelho", status: "read" },
+    { title: "1984", author: "George Orwell", status: "unread" },
+    { title: "To Kill a Mockingbird", author: "Harper Lee", status: "unread" }
+  ],
+  
+   showUnreadBooks: function () {
+    console.log("Unread books:");
+    for (let book of this.books) {
+      if (book.status === "unread") {
+        console.log(` ${book.title} by ${book.author}`);
+      }
+    }
+  }
+};
+
+library.showUnreadBooks(); */
